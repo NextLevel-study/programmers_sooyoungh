@@ -7,10 +7,10 @@ class Solution {
         int[][] answer = new int[row][col];
         
         for (int i = 0; i < row; i++) {
-            int[] arr1_row = arr1[i];
-            int[] arr2_row = arr2[i];
+            //int[] arr1_row = arr1[i]; 굳이 행만 따로 뽑아내지 말고 한번에 2차원 배열로 계산
+            //int[] arr2_row = arr2[i];
             for (int j = 0; j < col; j++) {
-                answer[i][j] = arr1_row[j] + arr2_row[j];
+                answer[i][j] = arr1[i][j] + arr2[i][j];
             }
         }
 
