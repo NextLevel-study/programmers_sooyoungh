@@ -9,8 +9,9 @@ class Solution {
 				if(ch < '0' || ch > '9') // 수가 아니면
 					answer = false;
 			}
-		} 
-		return answer;
+	} else answer = false;
+
+	return answer;
         
     }
 }
