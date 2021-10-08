@@ -14,7 +14,7 @@ class Solution {
         
         for ( int i = 0; i < cnt ; i++,a++ ){
             answer += a;
-            System.out.println(a);
+            //System.out.println(a);
         }
         
         return answer;
