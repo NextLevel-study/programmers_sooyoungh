@@ -10,3 +10,10 @@ class Solution {
         return answer;
     }
 }
+
+//Better
+class StringExercise{
+    String getMiddle(String word){
+        return word.substring((word.length()-1) / 2, word.length()/2 + 1);  // 알아서 짝수면 중간 2자가 나오게끔! 
+    }
+}
