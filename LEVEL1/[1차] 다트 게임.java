@@ -2,8 +2,8 @@
 class Solution {
     public int solution(String dartResult) {
 	int arr[] = new int[3];
-	int index = 0; // int[3]에서의 순서
-    int intCnt = 0; // 기본 점수의 갯수
+	int index = 0; // int[3]에서의 순서 (0~2)
+   	int intCnt = 0; // 기본 점수의 갯수 
 	
 	for(int i=0; i<dartResult.length(); i++) {
         
@@ -21,6 +21,8 @@ class Solution {
 			intCnt++;
             
 		} else {
+			// 보너스 이후 index ++; 하고 
+			// 옵션은 옵션마다 코드 짬
 			switch(dartChar) {
 			case 'S' :
 				arr[index] = (int)Math.pow(arr[index], 1);
@@ -35,6 +37,10 @@ class Solution {
 				index++;
 				break;
 			case '*' :
+				// intCnt는 실제 점수 갯수
+				// arr[0]이면 arr[0]만 연산 -> index = 0 < intCnt = 1
+				// arr[1]이면 arr[0]랑 arr[1] 연산 -> index = 0 < intCnt = 2
+				// arr[2]이면 arr[1]랑 arr[2] 연산 -> index = 1 < intCnt = 3
 				index = index - 2 < 0 ? 0 : index - 2;
 				while(index < intCnt) {
 					arr[index] = arr[index] * 2; 
