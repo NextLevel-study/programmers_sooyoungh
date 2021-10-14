@@ -2,7 +2,7 @@
 class Solution {
     public int solution(String dartResult) {
 	int arr[] = new int[3];
-	int index = 0; // dartResult에서의 순서
+	int index = 0; // int[3]에서의 순서
     int intCnt = 0; // 기본 점수의 갯수
 	
 	for(int i=0; i<dartResult.length(); i++) {
